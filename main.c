@@ -1,5 +1,6 @@
 #include <stdio.h> 
 #include <stdlib.h>
+#include "math.h"
 #include "input.h"
 #include "recursion.h"
 
@@ -14,7 +15,33 @@ int main() {
             };
    
     /* Program code. */
-    printf("%d", arrayMinimum(seq, 50));
+    printf("\nValor Mínimo: %d", arrayMinimum(seq, 50));
+    printf("\nSoma dos Pares: %d\n", arraySumEven(seq, 50));
+
+    int val;
+    int sumPar = 0;
+    int index = 0;
+    int sumEven = arraySumEven(seq, 50); 
+
+    printf("\nValor a Atingir (entre 32 e %d): ", sumEven);
+    readInteger(&val);
+
+    for(int i=0; i<50; i++)
+    {
+        if(sumPar < val)
+        {
+            if(seq[i]%2 == 0)
+            {
+                sumPar += seq[i];
+                index = i;
+            }
+        }
+        else
+        {
+            break;
+        }
+    }
+    printf("\nO valor %d é atingido no index %d\n", val, index);
 
     return EXIT_SUCCESS;
 }
