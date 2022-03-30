@@ -13,11 +13,16 @@ int main() {
             48, 65, 52, 10, 86, 82, 43, 4, 3, 6,
             78, 35, 31, 82, 18, 1, 48, 80, 23, 38
             };
+
+    int array[12] = {
+            1, 4, 4, 7, 7, 8, 11, 19, 21, 23, 24, 30 
+            };
    
     /* Program code. */
     printf("\nValor Mínimo: %d", arrayMinimum(seq, 50));
     printf("\nSoma dos Pares: %d\n", arraySumEven(seq, 50));
 
+    /*
     int val;
     int sumPar = 0;
     int index = 0;
@@ -42,6 +47,9 @@ int main() {
         }
     }
     printf("\nO valor %d é atingido no index %d\n", val, index);
+    */
+
+    printf("\nO valor 19 encontra-se no índice %d\n", binarySearch(19, array, 1, 30));
 
     return EXIT_SUCCESS;
 }
