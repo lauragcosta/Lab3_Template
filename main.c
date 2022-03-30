@@ -50,6 +50,14 @@ int main() {
     */
 
     printf("\nO valor 19 encontra-se no índice %d\n", binarySearch(19, array, 1, 30));
+    
+    quickSort(seq, 0, 49);
+    printf("\n[");
+    for(int i=0; i<50; i++)
+    {
+        printf("%d ", seq[i]);
+    }
+    printf("]\n");
 
     return EXIT_SUCCESS;
 }

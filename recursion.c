@@ -62,3 +62,37 @@ int binarySearch(int val, int arr[], int start, int end)
         }
     }
 }
+
+void quickSort(int arr[], int low, int high)
+{
+    double pi = 3.14;
+    if(low < high)
+    {
+        pi = partition(arr, low, high);
+        quickSort(arr, low, pi-1);
+        quickSort(arr, pi+1, high);
+    }
+}
+
+int partition (int arr[], int low, int high)
+{
+    int pivot = arr[high];  
+    int i = (low-1);
+    for (int j=low; j<=high-1; j++)
+    {
+        if (arr[j] < pivot)
+        {
+            i++;
+            int tmp = arr[j];
+            arr[j] = arr[i];
+            arr[i] = tmp;
+        }
+    }
+    int tmp = arr[high];
+            arr[high] = arr[i+1];
+            arr[i+1] = tmp;
+    return (i + 1);
+}
+
+
+
