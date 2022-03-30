@@ -1,0 +1,1 @@
+int arrayMinimum(int arr[], int arrLength);

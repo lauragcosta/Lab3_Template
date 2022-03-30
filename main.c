@@ -1,6 +1,7 @@
 #include <stdio.h> 
 #include <stdlib.h>
 #include "input.h"
+#include "recursion.h"
 
 int main() {
 
@@ -13,7 +14,7 @@ int main() {
             };
    
     /* Program code. */
-    printf("I do nothing at this moment.\n");
+    printf("%d", arrayMinimum(seq, 50));
 
     return EXIT_SUCCESS;
 }
